@@ -22,5 +22,4 @@ class RedisServiceTest {
     void testExistsKey() {
         System.out.println(redisService.existsKey("test"));
     }
-
 }

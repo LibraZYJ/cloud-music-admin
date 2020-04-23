@@ -15,12 +15,12 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
- * @author Yujie_Zhao
  * @ClassName CaptchaController
- * @Description TODO
- * @Date 2020/4/21  11:19
+ * @Description Captcha控制层
+ * @Author mq_xu
+ * @Date 2020/4/21
  * @Version 1.0
- **/
+ */
 @RestController
 @Slf4j
 public class CaptchaController {
@@ -39,7 +39,7 @@ public class CaptchaController {
         String text = defaultKaptcha.createText();
         log.info(text);
         //将验证码存入redis，配置的失效时间单位是分钟
-        redisService.set(name, text, 1L);
+        redisService.set(name, text, 2L);
         //生成验证码图片，并通过response输出到客户端浏览器
         BufferedImage image = defaultKaptcha.createImage(text);
         //设置response的响应内容类型为图片格式

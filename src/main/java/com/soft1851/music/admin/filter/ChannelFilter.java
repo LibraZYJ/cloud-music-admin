@@ -1,6 +1,6 @@
 package com.soft1851.music.admin.filter;
 
-import com.soft1851.music.admin.hander.RequestWrapper;
+import com.soft1851.music.admin.handler.RequestWrapper;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -8,12 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * @author Yujie_Zhao
  * @ClassName ChannelFilter
  * @Description 过滤器Filter，用来把request传递下去
- * @Date 2020/4/21  19:56
+ * @Author Yujie_Zhao
+ * @Date 2020/4/21
  * @Version 1.0
- **/
+ */
+
 @WebFilter(urlPatterns = "/*", filterName = "channelFilter")
 public class ChannelFilter implements Filter {
 

@@ -19,12 +19,12 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.time.Duration;
 
 /**
- * @author Yujie_Zhao
  * @ClassName RedisConfig
  * @Description Redis配置类
- * @Date 2020/4/21  20:17
+ * @Author Yujie_Zhao
+ * @Date 2020/4/21
  * @Version 1.0
- **/
+ */
 @Configuration
 @EnableCaching
 public class RedisConfig {

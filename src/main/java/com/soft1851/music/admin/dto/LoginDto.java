@@ -6,12 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author Yujie_Zhao
  * @ClassName LoginDto
  * @Description TODO
- * @Date 2020/4/21  14:14
+ * @Author Yujie_Zhao
+ * @Date 2020/4/21
  * @Version 1.0
- **/
+ */
 @Data
 @Builder
 @NoArgsConstructor

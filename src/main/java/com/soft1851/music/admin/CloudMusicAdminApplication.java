@@ -6,11 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
- * @author user
+ * @author Yujie_Zhao
  */
 @SpringBootApplication
 @MapperScan("com.soft1851.music.admin.mapper")
-//注册过滤器注解
 @ServletComponentScan
 public class CloudMusicAdminApplication {
 

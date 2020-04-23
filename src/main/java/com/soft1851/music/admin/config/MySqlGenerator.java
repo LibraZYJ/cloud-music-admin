@@ -22,7 +22,7 @@ public class MySqlGenerator {
     public static void main(String[] args) {
         //全局策略配置
         GlobalConfig config = new GlobalConfig();
-        //获得当前项目根路径d:/dev/SpringBoot/spring-boot-learning
+        //获得当前项目根路径
         String projectPath = System.getProperty("user.dir");
         config.setActiveRecord(true)
                 //作者注释
@@ -77,9 +77,9 @@ public class MySqlGenerator {
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL)
                 .setDriverName("com.mysql.jdbc.Driver")
-                .setUrl("jdbc:mysql://rm-m5ee476bu350735gjeo.mysql.rds.aliyuncs.com:3306/cloud_music?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true")
+                .setUrl("jdbc:mysql://localhost:3306/cloud_music?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai")
                 .setUsername("root")
-                .setPassword("XuNiit_#");
+                .setPassword("root");
 
         AutoGenerator autoGenerator = new AutoGenerator();
         autoGenerator.setGlobalConfig(config)

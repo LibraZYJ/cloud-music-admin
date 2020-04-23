@@ -1,22 +1,22 @@
 package com.soft1851.music.admin.config;
 
-
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author Yujie_Zhao
  * @ClassName CorsConfig
- * @Description TODO
- * @Date 2020/4/21  11:18
+ * @Description 跨域配置
+ * @Author Yujie_Zhao
+ * @Date 2020/4/15
  * @Version 1.0
- **/
+ */
 @Configuration
 public class CorsConfig {
     @Bean
@@ -45,3 +45,4 @@ public class CorsConfig {
         return bean;
     }
 }
+

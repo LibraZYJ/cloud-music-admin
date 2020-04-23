@@ -1,30 +1,32 @@
 package com.soft1851.music.admin.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.soft1851.music.admin.dto.LoginDto;
 import com.soft1851.music.admin.entity.SysAdmin;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
- * @author Yujie_Zhao
- * @since 2020-04-21
+ * @author mq_xu
+ * @since 2020-04-22
  */
 public interface SysAdminService extends IService<SysAdmin> {
     /**
      * 登录
+     *
      * @param loginDto
      * @return boolean
      */
     boolean login(LoginDto loginDto);
 
+
     /**
-     * 更具name查询admin
+     * 根据name查询Admin信息，包含其所有角色
+     *
      * @param name
      * @return
      */
-    SysAdmin getAdmin(String name);
-
+    SysAdmin getAdminAndRolesByName(String name);
 }

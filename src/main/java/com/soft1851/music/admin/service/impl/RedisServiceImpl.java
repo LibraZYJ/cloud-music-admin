@@ -12,12 +12,12 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author Yujie_Zhao
  * @ClassName RedisServiceImpl
  * @Description TODO
- * @Date 2020/4/21  20:23
+ * @Author mq_xu
+ * @Date 2020/4/21
  * @Version 1.0
- **/
+ */
 @Service
 @Slf4j
 public class RedisServiceImpl implements RedisService {

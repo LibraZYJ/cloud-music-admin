@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 spring:
   # jackson配置
   jackson:
@@ -9,8 +10,10 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/cloud_music?useUnide=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true
     url: jdbc:mysql://rm-m5ee476bu350735gjeo.mysql.rds.aliyuncs.com:3306/cloud_music?useUnide=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true
     username: root
+#    password: root
     password: XuNiit_#
     hikari:
       # 最小连接数
@@ -27,6 +30,7 @@ spring:
       connection-timeout: 30000
       # 连接测试查询语句
       connection-test-query: SELECT 1
+
   redis:
     database: 0
     password:
@@ -39,6 +43,7 @@ spring:
         max-active: 8
         max-wait: 1ms
       shutdown-timeout: 100ms
+
 #Mybatis-Plus配置
 mybatis-plus:
   # mapper映射文件路径
