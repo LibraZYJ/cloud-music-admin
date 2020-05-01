@@ -2,6 +2,7 @@ package com.soft1851.music.admin.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.soft1851.music.admin.common.ResponseResult;
 import com.soft1851.music.admin.domain.entity.SongList;
 import com.soft1851.music.admin.mapper.SongListMapper;
 import com.soft1851.music.admin.service.SongListService;
@@ -17,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -62,6 +64,33 @@ public class SongListServiceImpl extends ServiceImpl<SongListMapper, SongList> i
         sxssfWorkbook.write(outputStream);
         outputStream.flush();
         outputStream.close();
+    }
+
+    @Override
+    public ResponseResult updateSongList(SongList songList) {
+        SongList songList1 = songListMapper.selectById(songList.getSongListId());
+        songList1.setSongListName(songList.getSongListName());
+        songList1.setThumbnail(songList.getThumbnail());
+        songList1.setType(songList.getType());
+        songListMapper.updateById(songList1);
+        return ResponseResult.success(songList1);
+    }
+
+    /**
+     * 批量删除
+     * @param idLists
+     * @return
+     */
+    @Override
+    public ResponseResult batchDeleteById(String idLists) {
+        List<String> allIdList = new ArrayList<>();
+        String[] ids = idLists.split(",");
+        List<String> allIds = new ArrayList<>();
+        for (int i = 0;i<ids.length;i++){
+            allIds.add(ids[i]);
+        }
+        songListMapper.deleteBatchIds(allIds);
+        return ResponseResult.success();
     }
 
     /**

@@ -1,13 +1,14 @@
 package com.soft1851.music.admin.controller;
 
 
+import com.soft1851.music.admin.common.ResponseResult;
 import com.soft1851.music.admin.domain.entity.SongList;
 import com.soft1851.music.admin.service.SongListService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.apache.ibatis.annotations.Param;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -33,4 +34,20 @@ public class SongListController {
     public void export() {
         songListService.exportData();
     }
+
+    /**
+     * 修改歌单信息
+     * @param songList
+     * @return
+     */
+    @PutMapping("/update")
+    ResponseResult updateSongList(@RequestBody @Valid SongList songList){
+        return songListService.updateSongList(songList);
+    }
+
+    @DeleteMapping("/batchDelete")
+    ResponseResult batchDeleteById(@Param("ids") String ids){
+        return songListService.batchDeleteById(ids);
+    }
+
 }
