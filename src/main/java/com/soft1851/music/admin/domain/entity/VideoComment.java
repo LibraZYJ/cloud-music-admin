@@ -1,28 +1,29 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
  * 
  * </p>
  *
- * @author mq_xu
+ * @author Yujie_Zhao
  * @since 2020-04-22
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("song_comment")
-public class SongComment extends Model<SongComment> {
+@TableName("video_comment")
+public class VideoComment extends Model<VideoComment> {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,22 +34,22 @@ public class SongComment extends Model<SongComment> {
     private String id;
 
     /**
-     * 歌曲id
+     * 视频id
      */
-    @TableField("song_id")
-    private String songId;
+    @TableField("video_id")
+    private String videoId;
 
     /**
-     * userid
+     * 评论id
      */
-    @TableField("user_id")
-    private String userId;
+    @TableField("comment_id")
+    private String commentId;
 
     /**
      * 评论内容
      */
-    @TableField("comment_content")
-    private String commentContent;
+    @TableField("comment_contetn")
+    private String commentContetn;
 
     /**
      * 创建时间
@@ -61,24 +62,6 @@ public class SongComment extends Model<SongComment> {
      */
     @TableField("update_time")
     private LocalDateTime updateTime;
-
-    /**
-     * 歌单id
-     */
-    @TableField("song_list_id")
-    private String songListId;
-
-    /**
-     * 视频id
-     */
-    @TableField("vido_id")
-    private String vidoId;
-
-    /**
-     * 点赞量
-     */
-    @TableField("like_counts")
-    private Integer likeCounts;
 
 
     @Override

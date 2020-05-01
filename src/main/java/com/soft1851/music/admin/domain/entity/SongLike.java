@@ -1,48 +1,61 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
  * 
  * </p>
  *
- * @author mq_xu
+ * @author Yujie_Zhao
  * @since 2020-04-22
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("song_list_music")
-public class SongListMusic extends Model<SongListMusic> {
+@TableName("song_like")
+public class SongLike extends Model<SongLike> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
+     * 点赞id
      */
-    @TableId("id")
-    private String id;
+    @TableId("like_id")
+    private String likeId;
 
     /**
-     * 歌曲歌单id
+     * 点赞用户id
      */
-    @TableField("song_list_id")
-    private String songListId;
+    @TableField("user_id")
+    private String userId;
 
     /**
      * 歌曲id
      */
     @TableField("song_id")
     private String songId;
+
+    /**
+     * 评论id
+     */
+    @TableField("comment_id")
+    private String commentId;
+
+    /**
+     * 视频id
+     */
+    @TableField("video_id")
+    private String videoId;
 
     /**
      * 创建时间
@@ -57,15 +70,15 @@ public class SongListMusic extends Model<SongListMusic> {
     private LocalDateTime updateTime;
 
     /**
-     * 榜单排名
+     * 歌单id
      */
-    @TableField("ratio")
-    private Integer ratio;
+    @TableField("song_list_id")
+    private String songListId;
 
 
     @Override
     protected Serializable pkVal() {
-        return this.id;
+        return this.likeId;
     }
 
 }

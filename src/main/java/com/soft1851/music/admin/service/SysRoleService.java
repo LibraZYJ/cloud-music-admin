@@ -1,7 +1,7 @@
 package com.soft1851.music.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.soft1851.music.admin.entity.SysRole;
+import com.soft1851.music.admin.domain.entity.SysRole;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Map;
  *  服务类
  * </p>
  *
- * @author mq_xu
+ * @author Yujie_Zhao
  * @since 2020-04-22
  */
 public interface SysRoleService extends IService<SysRole> {

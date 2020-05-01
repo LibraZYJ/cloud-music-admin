@@ -17,7 +17,7 @@ import java.io.IOException;
 /**
  * @ClassName CaptchaController
  * @Description Captcha控制层
- * @Author mq_xu
+ * @Author Yujie_Zhao
  * @Date 2020/4/21
  * @Version 1.0
  */

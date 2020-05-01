@@ -4,7 +4,7 @@ package com.soft1851.music.admin.service;
  * @ClassName RedisService
  * @Description RedisTemplate中key的默认的序列化方案是JdkSerializationRedisSerializer
  * StringRedisTemplate中，key的默认序列化方案StringRedisSerializer
- * @Author mq_xu
+ * @Author Yujie_Zhao
  * @Date 2020/4/21
  * @Version 1.0
  */

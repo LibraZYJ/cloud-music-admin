@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
- * @author Yujie_Zhao
+ * @author taoranran
  */
 @SpringBootApplication
 @MapperScan("com.soft1851.music.admin.mapper")

@@ -1,7 +1,7 @@
 package com.soft1851.music.admin.common;
 
 /**
- * @author mq_xu
+ * @author Yujie_Zhao
  * @description 各类返回的状态码
  * @create 2020/2/5
  */
@@ -35,6 +35,7 @@ public enum ResultCode {
     USER_NOT_FOUND(20009, "用户不存在"),
     USER_NO_AUTH(20019, "用户权限不足"),
     USER_TOKEN_EXPIRES(200010, "Token已过期"),
+    USER_AUTH_ERROR(200011, "用户认证失败"),
 
 
     /* 业务错误：30001-39999 */

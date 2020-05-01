@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * @ClassName CaptchaConfig
  * @Description Captcha配置类
- * @Author Yujie_Zhao
+ * @Author mq_xu
  * @Date 2020/4/21
  * @Version 1.0
  */
@@ -25,14 +25,14 @@ public class CaptchaConfig {
         //有边框
         properties.setProperty("kaptcha.border", "yes");
         //边框色
-        properties.setProperty("kaptcha.border.color", "252,180,180");
+        properties.setProperty("kaptcha.border.color", "168,184,204");
         //字体颜色
-        properties.setProperty("kaptcha.textproducer.font.color", "40,44,52");
+        properties.setProperty("kaptcha.textproducer.font.color", "0,0,0");
         //渐变色
-        properties.setProperty("kaptcha.background.clear.from", "216,174,169");
+        properties.setProperty("kaptcha.background.clear.from", "168,184,204");
         properties.setProperty("kaptcha.background.clear.to", "white");
         //字体大小
-        properties.setProperty("kaptcha.textproducer.font.size", "28");
+        properties.setProperty("kaptcha.textproducer.font.size", "30");
         //字体
         properties.setProperty("kaptcha.textproducer.font.names", "微软雅黑");
         //验证码图片大小

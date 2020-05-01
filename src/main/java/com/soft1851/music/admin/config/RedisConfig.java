@@ -21,7 +21,7 @@ import java.time.Duration;
 /**
  * @ClassName RedisConfig
  * @Description Redis配置类
- * @Author Yujie_Zhao
+ * @Author mq_xu
  * @Date 2020/4/21
  * @Version 1.0
  */

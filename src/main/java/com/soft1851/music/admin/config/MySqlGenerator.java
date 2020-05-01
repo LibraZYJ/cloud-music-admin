@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @ClassName MySqlGenerator
  * @Description 代码生成器
- * @Author Yujie_Zhao
+ * @Author mq_xu
  * @Date 2020/4/16
  * @Version 1.0
  */
@@ -26,7 +26,7 @@ public class MySqlGenerator {
         String projectPath = System.getProperty("user.dir");
         config.setActiveRecord(true)
                 //作者注释
-                .setAuthor("Yujie_Zhao")
+                .setAuthor("mq_xu")
                 //代码生成输出路径
                 .setOutputDir(projectPath + "/src/main/java")
                 //覆盖已有文件，默认false

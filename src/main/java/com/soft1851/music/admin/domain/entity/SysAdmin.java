@@ -1,4 +1,4 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -18,7 +18,7 @@ import java.util.List;
  * 
  * </p>
  *
- * @author mq_xu
+ * @author Yujie_Zhao
  * @since 2020-04-22
  */
 @Data
